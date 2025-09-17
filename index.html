@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>병아리 음악회</title>
+
+	<style>
+		@font-face {
+    font-family: 'YoonChoWooSan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaManSeh.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+		body{margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;  
+      align-items:center;      
+      justify-content:flex-start;
+      gap:5px;                
+      background:#fffdf7;
+       overflow-x: hidden;
+      text-align:center;  
+    font-family: 'YoonChoWooSan';}
+
+     	p{margin: 50,0,0,70; }
+ 
+ 	.sign {
+      background: url('bg.png') no-repeat center/contain;
+      width: 700px;     
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .imgs{
+      display:flex;
+      gap:0px;
+      flex-wrap:wrap;          
+      justify-content:center;
+      align-items:center;
+    }
+    .lc{
+      position: fixed;
+      top:0;
+      left:0;
+      height:100vh;
+      z-index:0;
+    }
+    
+    .rc{
+      position: fixed;
+      top:0;
+      right:0;
+      height:100vh;
+      z-index:0;
+    }
+	</style>
+</head>
+
+<body>
+	<div class="sign">
+    <p>병아리 음악회</p>
+  </div>
+
+		<audio id="s1" src="s1.mp3" ></audio>
+		<audio id="s2" src="s2.mp3" ></audio>
+		<audio id="s3" src="s3.mp3" ></audio>
+<div class="imgs">
+		<img id="img1" src="sing.png" width="400">
+  		<img id="img2" src="sing.png" width="400">
+ 		<img id="img3" src="sing.png" width="400">
+</div>
+ <img class="lc" src="left-curtain.png">
+  <img class="rc" src="right-curtain.png">
+<script>
+	 
+	let s1Play = false;
+	
+
+	img1.onclick = function(){
+			s1.play();
+		if(!s1Play){
+			s1.play();
+			img1.src = "singing.png"
+			s1Play = true;
+	}else{
+		s1.pause();
+		img1.src = "sing.png";
+		s1Play = false; 
+	}
+}
+
+
+let s2Play = false;
+	
+
+	img2.onclick = function(){
+			s2.play();
+		if(!s2Play){
+			s2.play();
+			img2.src = "singing.png"
+			s2Play = true;
+	}else{
+		s2.pause();
+		img2.src = "sing.png";
+		s2Play = false; 
+	}
+}
+
+let s3Play = false;
+	
+
+	img3.onclick = function(){
+			s3.play();
+		if(!s3Play){
+			s3.play();
+			img3.src = "singing.png"
+			s3Play = true;
+	}else{
+		s3.pause();
+		img3.src = "sing.png";
+		s3Play = false; 
+	}
+}
+
+document.body.style.fontSize = "50px";
+document.body.style.color = "brown";
+
+//forest-button > html, forestButton > js
+
+</script>
+</body>
+</html>
